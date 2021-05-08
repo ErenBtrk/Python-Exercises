@@ -18,7 +18,7 @@ while True:
     else:
         break
 
-if(number % 4 == 0)
+if(number % 4 == 0):
     print(f"You have entered {number}.It is multiple of 4")
 else:
     if(number % 2 == 0):
@@ -33,4 +33,20 @@ while True:
         print(excObject)
     else:
         break
+
+while True:
+    try:
+        check = int(input("Please enter a number : "))
+        if(check == 0):
+            raise Exception("Please enter something else than 0")
+        
+    except Exception as excObject:
+        print(excObject)
+    else:
+        break
+
+if(number % check == 0):
+    print(f"{number} can be divided evenly to {check}")
+else:
+    print(f"{number} can NOT be divided evenly to {check}")
 
