@@ -27,9 +27,5 @@ print(new_list)
 
 number = int(input("Please enter a number : "))
 
-user_list = []
-for item in my_list:
-    if(item < number):
-        user_list.append(item)
-
+user_list = [ item for item in my_list if item < number ] #list comprehension
 print(user_list)
