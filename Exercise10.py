@@ -30,3 +30,17 @@ new_list = new_list + [ item for item in b if not item in new_list ]
 new_list.sort()
 print(new_list)
 
+import random
+
+list1 = random.sample(range(1,30),12)
+print(list1)
+
+list2 = random.sample(range(1,30),16)
+print(list2)
+
+list3 = []
+list3 = [item for item in list1 if not item in list3]
+list3 = list3 + [ item for item in list2 if not item in list3]
+list3.sort()
+print(list3)
+
