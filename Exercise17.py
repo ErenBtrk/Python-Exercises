@@ -25,7 +25,6 @@ import random
 import re
 
 randomNumber = random.randint(1000,9999)
-randomNumber = 7779
 randomNumberList = list(str(randomNumber))
 print(randomNumber)
 
@@ -54,23 +53,37 @@ while True:
     else:
         userInputList = list(userInput)
     
-    cowbullList = ["","","",""]
+    cowbullList1 = ["0","1","2","3"]
+    cowbullList2 = ["0","1","2","3"]
     cowCount = 0
     for index in range(len(randomNumberList)):
         if(randomNumberList[index] == userInputList[index]):
-            cowbullList[index] = "Cow"
+            cowbullList1[index] = "Cow"
+            cowbullList2[index] = "Cow"
             cowCount += 1
-    print(cowbullList)
+    print(cowbullList1)
+    print(cowbullList2)
+
     bullCount = 0
-    for item in randomNumberList:
-        index = randomNumberList.index(item)
-        if(cowbullList[index] == "Cow"):
+    for index in range(len(randomNumberList)):
+        if(cowbullList1[index] == "Cow" or cowbullList1[index] == "Bull"):
             continue
+        for index2 in range(len(userInputList)):
+            if(cowbullList2[index2] == "Cow" or cowbullList2[index2] == "Bull"):
+                continue
+            if(randomNumberList[index] == userInputList[index2] and cowbullList1[index] != "Bull" and cowbullList2[index2] != "Bull"):
+                cowbullList1[index] = "Bull"
+                cowbullList2[index2] = "Bull"
+                bullCount += 1
+                
+    print(cowbullList1)
+    print(cowbullList2)
+
         
-        if((item in userInputList) and  (cowbullList[index] != "Cow") ):
-            bullCount += 1
 
     print("Cow",cowCount,"Bull",bullCount)
+
+
         
 
         
