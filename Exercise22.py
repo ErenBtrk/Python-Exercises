@@ -25,12 +25,19 @@ with open('example.txt') as f:
 		else:
 			counter_dict[line] = 1
 		line = f.readline()
+ 
 
 print(counter_dict)
+dict2 = {}
+string = "Bat"
+if string in dict2:
+    dict2[string] += 1
+else:
+    dict2[string] = 1
 
-line = f.readline
-dictionary = {}
-dictionary["1"] += 1
+print(dict2)
 
-print(dictionary)
+dict2["Apple"] = 1
+dict2["Pear"] = 0
 
+print(dict2)
