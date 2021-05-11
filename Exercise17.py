@@ -22,11 +22,12 @@ Until the user guesses the number.
 
 import string
 import random
-import re
+
 
 randomNumber = random.randint(1000,9999)
 randomNumberList = list(str(randomNumber))
-print(randomNumber)
+
+
 
 countRounds = 0
 
@@ -34,7 +35,7 @@ while True:
     countRounds += 1
     while True:
         try:
-            userInput = input(f"Round.{countRounds} : Please enter a 4 digits number : ")
+            userInput = input(f"Round.{countRounds} : Please enter a 4 digits number : ").replace(" ","")
             if(not userInput.isdigit()):
                 raise Exception("You did not enter a number.")
             else:
@@ -61,8 +62,7 @@ while True:
             cowbullList1[index] = "Cow"
             cowbullList2[index] = "Cow"
             cowCount += 1
-    print(cowbullList1)
-    print(cowbullList2)
+    
 
     bullCount = 0
     for index in range(len(randomNumberList)):
@@ -75,16 +75,11 @@ while True:
                 cowbullList1[index] = "Bull"
                 cowbullList2[index2] = "Bull"
                 bullCount += 1
-                
-    print(cowbullList1)
-    print(cowbullList2)
-
-        
-
-    print("Cow",cowCount,"Bull",bullCount)
+            
+    print(f"Cows = {cowCount} , Bulls = {bullCount}")
 
 
-        
+print(f"random number was = {randomNumber}")   
 
         
         
