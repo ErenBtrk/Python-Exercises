@@ -20,6 +20,7 @@ with open('example.txt') as f:
 		else:
 			counter_dict[line] = 1
 		line = f.readline()
+f.close()
  
 
 print(counter_dict)
