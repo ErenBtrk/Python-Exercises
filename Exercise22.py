@@ -15,21 +15,22 @@ Extra:
     
 '''
 
-file = open("example.txt","r")
-count = 0
-countDarth = 0
-countLea = 0
+counter_dict = {}
+with open('example.txt') as f:
+	line = f.readline()
+	while line:
+		line = line.strip()
+		if line in counter_dict:
+			counter_dict[line] += 1
+		else:
+			counter_dict[line] = 1
+		line = f.readline()
 
-for item in file:
-    count += 1
-    if(item == "Darth\n"):
-        countDarth += 1
-    if(item == "Lea\n"):
-        countLea += 1
+print(counter_dict)
 
-print(count)
-print(countDarth)
-print(countLea)
+line = f.readline
+dictionary = {}
+dictionary["1"] += 1
 
-
+print(dictionary)
 

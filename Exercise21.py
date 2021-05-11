@@ -21,5 +21,6 @@ print(number_list_str)
 with open(fileName,"w") as file:
     for item in number_list_str:
         file.write(item+' ')
+    file.close()
 
 
