@@ -1,4 +1,5 @@
 '''
+ EXERCISE 24-26-27-29
  This exercise is Part 1 of 4 of the Tic Tac Toe exercise series.
  The other exercises are: Part 2, Part 3, and Part 4.
 
