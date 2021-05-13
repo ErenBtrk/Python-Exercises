@@ -16,6 +16,7 @@ import random
 
 with open('dictionary.txt') as f:
 	words = list(f)
+f.close()
 print(random.choice(words).strip())
 
 
